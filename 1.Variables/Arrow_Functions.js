@@ -28,6 +28,23 @@ const chai=()=>{
 // }
 
 
+// global scope ke polution cause problems to 
+// to remove pollutions this immediately invoked functions are used
+
+// when function is executed ifi is executed immediatly
+// SyntaxError
+
+// (function chaii(){
+//     console.log("chailele")
+// })();
+// ';' to end ifi invoked as it does not will be able to know where to end
+
+
+((name)=>{
+    console.log("launch");
+})('hit')
+
+
 
 
 
