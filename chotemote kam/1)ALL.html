@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        body{
+            justify-content: space-around;
+            background-color: #212121;
+            color:#fff;
+        }
+        h1{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+        }
+        .extra{
+            border: 5px solid grey;
+            background-color: #635454;
+            padding: 4px;
+            border-radius: 5px;
+        }
+        .projects{
+            display: flex;
+            margin-top: 50px;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .project-link{
+            border: 5px solid grey;
+            color: #212121;
+            border-radius: 2%;
+            padding: 10px;
+            background-color: rgb(109, 105, 105);
+        }
+        .project-link:hover{
+            background-color: #635454;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a class="extra" href="/" aria-current="page">Home</a>
+        <a class="extra" target="_blank" href="https://www.youtube.com/@chaiaurcode">Youtube channel</a>
+    </nav>
+    <main>
+        <h1>All initial basic projects</h1>
+        <div class="projects">
+            <a class="project-link" href="./color_change.html">Project 1-Color Changer</a>
+            <a class="project-link" href="">Project 2-BMI GENERATOR</a>
+            <a class="project-link" href="">Project 3-DIGITAL CLOCK</a>
+            <a class="project-link" href="">Project 4-GUESS THE NUMBER</a>
+        </div>
+
+    </main>
+</body>
+</html>

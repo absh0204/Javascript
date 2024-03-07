@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>JavaScript background color changer</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #212121;
+            display: flex;
+            /* justify-content: center; */
+            gap: 0px;
+            flex-direction: column;
+        }
+        .canvas {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center; */
+            height: 100%;
+            color: white;
+            padding: 30px;
+        }
+        .button {
+           height: 30px;
+           width: 80px;
+           border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.5s ease-in;
+            
+        }
+        .button:hover{
+            transform: scale(1.1);
+            box-shadow: 0 0 6px white;
+        }
+        .buttons{
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            border: 5px solid black;
+            padding: 10px;
+            box-shadow: 0 0 20px red;
+            border-radius: 30px;
+            background-color: black;
+        }
+        nav{
+            width: 90vw;
+            display: flex;
+            justify-content: space-around;
+            padding: 0 30px;
+            flex-wrap: wrap;
+        }
+        .para{
+            text-align: center;
+        }
+        #grey {
+            background-color: grey;
+        }
+        #cyan {
+            background-color: cyan;
+        }
+        #sea-green {
+            background-color: #12ac73;
+        }
+        #orange{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    Atul Harsh Creater
+    <nav >
+        <a href="1)ALL.html">HOME</a>
+        <a href="https://www.youtube.com/@chaiaurcode">YOUTUBE CHANNEL</a>
+    </nav>
+    <div class="canvas">
+        <h1>Color Scheme Switcher</h1>
+        <div class="buttons">
+        <div class="button" id="grey"></div>
+        <div class="button" id="cyan"></div>
+        <div class="button" id="sea-green"></div>
+        <div class="button" id="orange"></div>
+    </div>
+        <div>
+            <h2>Click on the above colors:
+            </h2>
+            <p class="para">To change the Body color</p>
+        </div>
+    </div>
+</body>
+<script>
+    const buttons = document.querySelectorAll('.button');
+    const body = document.querySelector('body');
+    buttons.forEach(function(element) {
+        console.log(element);
+        element.addEventListener('click', function(e) {
+            console.log(e);
+            console.log(e.target);
+            if (e.target.id == 'grey') {
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id == 'cyan') {
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id == 'green') {
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id == 'orange') {
+                body.style.backgroundColor = e.target.id;
+            }
+        });
+    });
+</script>
+
+</html>
