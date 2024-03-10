@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            margin: 100px;
+        }
+        .parent{
+            display: flex;
+            justify-content: center;
+        }
+        #c1{
+            margin: 10px;
+            border: 20px ;
+            padding: 10px;
+            background-color: #c99c9c;
+        }
+        #c2{
+            margin: 10px;
+            border: 20px;
+            padding: 10px;
+            background-color: #c99c9c;
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            border: 15px;
+            padding:10px;
+            background-color: rgb(205, 218, 218);
+        }
+        p{
+            display: flex;
+            justify-content: center;
+            margin: 25px;
+            padding:10px;
+            border:40px;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>BMI-CALCULATER </h1>
+    <div class="parent">
+        <div class="child">
+            <div  id="c1">Weight:<input type="number" class="input-num" required value="0" placeholder="Weight in kg"></div>
+            <div  id="c2">Height:<input type="number" class="input-num1" required value="0" placeholder="Height in meter"></div>
+            <div class="button" onclick="BMI()"><button>Calculate</button></div>
+        </div>
+    </div>
+    <p id="result"></p>
+
+    
+</body>
+<script>
+    function BMI(){
+        const val= document.querySelector('.input-num').value;
+        const val2= document.querySelector('.input-num1').value;
+        if(val2<=0 || val<=0){
+            document.getElementById('result').innerHTML=`Please Enter correct height and weight.`
+            document.querySelector('.input-num').value=0;
+            document.querySelector('.input-num1').value=0;
+        }
+        else{
+            const bmi=val/(val2*val2)
+           document.getElementById('result').innerHTML=`Your BMI is ${bmi}`
+        }
+    
+    }
+</script>
+</html>
