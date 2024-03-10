@@ -6,52 +6,54 @@
     <title>Digital Clock</title>
     <style>
         *{
-            margin:0;
-            padding:0;
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
+            
         }
         .parent{
-            border: 310px solid #307ba0;
-            display:grid;
-            grid-template-columns: 70px 70px 70px;
+            display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             width: 100vw;
-            background-color: #212121;
-            color: aliceblue;
+            position: relative;
+            background-color: rgb(19, 22, 21);
         }
-        .item1{
-            justify-content: space-between;
-            padding: 50%;
-            margin-right: 100px;
-            
-        }
-        .item2{
-            /* border: 10px solid rgb(90, 223, 165); */
-            justify-content: space-between;
-            padding: 50%;
-            margin-right: 100px;
-            
-        }
-        .item3{
-            /* border: 10px solid rgb(90, 223, 165); */
-            justify-content: space-between;
-            padding: 50%;
-            margin-right: 100px;
-            
+        #saman{
+            height: 15vh;
+            width: 30vw;
+            border-radius: 1%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: grey;
+            color: #333;
+            font-family:"Courier New", Courier, monospace;
+            font-size: 4rem;
+
+
         }
     </style>
 </head>
 <body>
     <div class="parent">
-        <div class="item1"></div>
-        <div class="item2"></div>
-        <div class="item3"></div>
+        <div id="saman"> abd</div>
     </div>
     
 </body>
 <script>
-    
+    function updateTime(){
+        const date=new Date();
+        const hours=String(date.getHours()).padStart(2,'0');
+        const min=String(date.getMinutes()).padStart(2,'0');
+        const sec=String(date.getSeconds()).padStart(2,'0');
+        const time=`${hours}:${min}:${sec}`
+
+        document.getElementById('saman').textContent=time;
+    }
+    updateTime();
+    setInterval(updateTime,1000);
 </script>
+
 </html>
