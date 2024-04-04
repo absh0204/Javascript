@@ -1,0 +1,33 @@
+<!-- //Synchronus and aasynchronous are blocking and non-blocking code 
+
+// blocking code Says wait till i performed the task
+// non blocking are the ones which say keep doing the work when done will notify
+
+// FUNCTIONS:
+// 1) setTimeout(): in this functions setTimeout() the program is made to wait the mentioned time and then a statement 
+// is executed. This happens once only.
+// 2) setInterval():in this function setInterval() the program after every mentioned interval performs a task repeteadly -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-sync</title>
+</head>
+<body>
+    <h1>YY THE YOUTUBE NOT SNAPTUBE...</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //It changes the title of the file in 2000ms of 
+    // going live or execution on server.
+    const changeText=function(){
+        document.querySelector('h1').innerHTML="Hey only Youtube is Best.";
+    };
+    setTimeout(changeText,'2000');
+    document.getElementById('stop').addEventListener('click',function(){
+         clearTimeout(changeText)
+    })
+</script>
+</html>
