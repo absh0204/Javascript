@@ -4,7 +4,7 @@
 // n=Number(num)
 // console.log(n+" "+typeof n);
 
-let num2="66abxx"
+let num2="66abxx"// o/p is NaN not a number
 // coversion of type is allowed in javascript but the value if not valid then different
 // behaviour is observed like following
 

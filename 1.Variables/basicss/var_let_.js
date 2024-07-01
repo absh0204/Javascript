@@ -53,14 +53,16 @@ created a board ECMASCRIPT whose role is to set rules, decide standards
 and specification
 
 
-number=> 2 ki power 53 range
-bignint=> more range than number useful in case of numbers releated to trading , facebook etc
-String
-null=> empty value representation (output in case of function)(typeof = object)
-undefined=> its a type which indicates value is not set. (output in case of function)(typeof = undefined)
-symbol=> When many different components are used then it
+1)number=> 2 ki power 53 range
+2)bignint=> more range than number useful in case of       numbers releated to trading , facebook etc
+3)String
+4)null=> empty value representation (output in case of function)(typeof O/P= object)
+4)undefined=> its a type which indicates value is not set. (output in case of function)(typeof O/P= undefined)
+5)symbol=> When many different components are used then it
     is used to uniquely identify.
+6)boolean
 
+7)object (null ka type) null is object
 
 
 */
